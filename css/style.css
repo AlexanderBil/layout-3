@@ -1,0 +1,879 @@
+@font-face {
+    font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+    src: local('☺'), url('../fonts/akzidenzgroteskbq-bdcnd-opentype_bigfontsite.com.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: local('☺'), url('../fonts/bebas-neue-regular_bigfontsite.com.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: local('☺'), url('../fonts/pt-sans_bigfontsite.com.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*--------------------------Header-------------------------*/
+.wrapper {}
+
+.content {
+    margin: 0 auto;
+    /* max-width: 1368px; */
+}
+
+.content-header {}
+
+.content-header-main {
+    max-width: 868px;
+    margin: 33px auto;
+}
+
+
+
+/*---------------------Content-header-1------------------------*/
+.content-header-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.header-1-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+}
+
+.b-1 {
+    color: #000000;
+    font-family: Bebas;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.b-1.active{
+    background-color: #000;
+    color: #fff;
+    padding: 0px 4px;
+}
+
+.header-1-text {
+    color: #000000;
+    font-family: Bebas;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.header-1-link a {
+    color: #000000;
+    font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+.header-1-link a:hover {
+    color: #bab082;
+}
+
+
+/*--------------------Content-header-2-----------------------*/
+
+.content-header-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 89px;
+}
+
+.list-1,
+.list-2 {
+    display: flex;
+}
+
+.list-1 li,
+.list-2 li {
+    margin: 0px 46px 0px 0px;
+    position: relative;
+}
+
+.list-1 li:last-child {
+    margin: 0px 0px 0px 0px;
+}
+
+.list-2 li:last-child {
+    margin: 0px 0px 0px 0px;
+}
+
+.list-1 a,
+.list-2 a {
+    font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 25px;
+    letter-spacing: 1.5px;
+}
+
+/*---------Псевдоелемент подчеркивание ссылок-------------*/
+.list-1 li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+}
+
+.list-1 a:hover {
+    color: #bab082;
+}
+
+.list-1 li:hover::after {
+    left: 0;
+    width: 100%;
+    transition: all 0.2s linear 0s;
+}
+
+/*----------Псевдоелемент подчеркивание ссылок-2 ------------*/
+
+.list-2 li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+}
+
+.list-2 a:hover {
+    color: #bab082;
+}
+
+.list-2 li:hover::after {
+    left: 0;
+    width: 100%;
+    transition: all 0.2s linear 0s;
+}
+
+.header-2-picture img {}
+
+.header-2-bottom {
+    text-align: center;
+    color: #000000;
+    font-family: Bebas;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+/*-----------------Мобильная навигация и кнопка-----------------*/
+
+.button-mob-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    display: none;
+    position: relative;
+    z-index: 30;
+}
+
+.button-mob-menu-polosa {
+    width: 30px;
+    height: 5px;
+    background-color: #000;
+    position: relative;
+}
+
+.button-mob-menu-polosa::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #000;
+    top: 10px;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.button-mob-menu-polosa::after {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #000;
+    top: -10px;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.button-mob-menu-polosa.active-menu{
+background-color: transparent;
+}
+
+.button-mob-menu-polosa.active-menu::before{
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.button-mob-menu-polosa.active-menu::after{
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.mob-menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    left: -110%;
+    overflow: auto;
+    transition: all 0.5s ease;
+}
+.mob-menu.active{
+left: 0;
+opacity: 0.9;
+}
+
+.mob-menu-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+}
+.mob-menu-content a{
+    font-size: 22px;
+    color: #000;
+    line-height: 40px;
+    letter-spacing: 1.5px;
+    font-family: Bebas;
+    
+}
+
+
+/*-----------------Box-1----------------------*/
+
+.content-box-1 {
+    display: flex;    
+
+}
+/*--------------Слайдер---------------------*/
+.box-1-slider{
+    flex: 0 0 50%;
+    min-width: 0;    /*Если слайдер флекс елемент обязательно поставить!!!!!!!!!!!*/
+    z-index: 1;
+    position: relative;
+}
+
+.box-1-slider-item{
+    position: relative;
+ }
+
+.box-1-slider-item img{
+width: 100%;   
+height: auto;
+object-fit: cover;
+top: 0;
+left: 0;
+position: absolute; 
+}
+
+.slick-track{
+    display: flex;     /*Выстраиваем картинки в ряд----(slick-track это лента)*/
+
+}
+.slick-list{
+    overflow: hidden;           /*Ограничевающая оболочка, скрываем все фото что вылазят*/   
+    padding: 0px 0px 50% 0px;   /*Устанавливаем высоту слайдера отступом*/    
+}
+
+
+.box-1-black {
+    flex: 0 0 50%;
+    background-color: #000;
+}
+
+.box-1-info {
+    display: flex;
+    margin: 82px 0px 0px 62px;
+    flex-direction: column;
+    background-color: #000;
+    max-width: 303px;
+}
+
+
+.box-1-info-title {
+    margin: 0px 0px 35px 0px;
+    color: #ffffff;
+    font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.box-1-info-text {
+    margin: 0px 0px 50px 0px;
+    color: #ffffff;
+    font-family: "PT Sans";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+
+.box-1-info-button {
+    display: flex;
+}
+
+.info-button-1 {
+    padding: 18px 34px;
+    background-color: #fff;
+    color: #000;
+    font-family: Bebas;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+
+}
+
+.info-button-2 {
+    padding: 18px 34px;
+    background-color: #000;
+    color: #fff;
+    font-family: Bebas;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: underline;
+}
+
+
+.info-button-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #bab082;
+    transition: all 0.3s ease;
+    transform: scale(0);
+}
+
+.info-button-1:hover::before {
+    transform: scale(1);
+}
+
+.info-button-1:hover span {
+    position: relative;
+    color: #000;
+}
+
+.info-button-2:hover span {
+    color: #bab082;
+}
+
+/*----------------------------Box-2---------------------------*/
+
+.content-box-2 { 
+     border: 1px solid rgb(141, 25, 25);
+}
+
+.content-box-2-main { 
+    max-width: 868px;
+    margin: 75px auto;
+    display: flex;
+    
+
+}
+
+.content-box-2-main-1 { 
+    display: flex;
+    flex: 0 1 50%;
+}
+
+.content-box-2-main-2 {
+    display: flex; 
+    flex: 0 1 50%;
+}
+
+.box-2-main-1-col {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+ }
+
+.box-2-main-2-col {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+ }
+
+.col-picture img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+ }
+ .col-picture{
+     margin: 0px 0px 25px 0px;
+ }
+
+.col-title { 
+max-width: 121px;
+color: #000000;
+font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+font-size: 25px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+margin: 0px 0px 34px 3px;
+}
+
+.col-text {
+    flex: 1 1 auto;
+max-width: 185px;
+color: #000000;
+font-family: "PT Sans";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+margin: 0px 0px 32px 0px;
+ }
+
+.col-button{
+    padding: 18px 40px;
+    max-width: 155px;
+    background-color: #000;
+    color: #fff;
+    font-family: Bebas;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0px 0px 25px 0px;
+    position: relative;
+ }
+
+
+
+ .col-button::before{
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #bab082;
+     transform: scale(0);
+     transition: all 0.3s ease;
+
+ }
+ .col-button:hover::before{
+    transform: scale(1);
+ }
+
+ .col-button:hover span{
+     color:black;
+     position: relative;
+ }
+ 
+.col-link{
+
+color: #000000;
+font-family: Bebas;
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+text-decoration: underline;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+ }
+
+/*--------------------------Box-3-------------------------*/
+
+.content-box-3 { 
+    display: flex;
+}
+
+.box-3-title {
+display: flex;
+align-items: center;
+flex: 0 1 50%;
+color: #ffffff;
+font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 5px;
+background-color: #000;
+ }
+ .box-3-title span{
+     margin: 0px 0px 0px 217px;
+     font-size: 50px;
+ }
+
+.box-3-foto { 
+flex: 0 1 50%;
+}
+.box-3-foto img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/*------------------------Box-4-----------------------*/
+
+.content-box-4 {
+    background-color: #ebebeb;
+    padding: 55px 0px 55px 0px;
+ }
+
+.content-box-4-mane {
+    max-width: 868px;
+    margin: 0px auto;
+    display: flex;
+    background-color: #ebebeb;
+ }
+
+.box-4-mane-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+ }
+
+.box-4-mane-2 { 
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+}
+
+.title-text{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+max-width: 310px;
+margin: 0px 0px 0px 10px;
+}
+.mane-1-1 {
+    display: flex; 
+    margin: 0px 0px 55px 0px;
+}
+
+.mane-1-2 {
+    display: flex;
+ }
+
+.mane-2-1 { 
+    display: flex;
+    margin: 0px 0px 55px 0px;
+}
+
+.mane-2-2 { 
+    display: flex;
+}
+
+
+.mane-1-picture,
+.mane-2-picture, 
+.mane-3-picture,
+.mane-4-picture
+{ 
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  
+}
+
+.mane-1-picture img,
+.mane-2-picture img, 
+.mane-3-picture img,
+.mane-4-picture img
+{ 
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+.mane-1-title,
+.mane-2-title,
+.mane-3-title,
+.mane-4-title
+{ 
+
+color: #000000;
+font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+font-size: 25px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+}
+
+
+.mane-1-text,
+.mane-2-text,
+.mane-3-text,
+.mane-4-text
+ { 
+
+color: #000000;
+font-family: "PT Sans";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+ }
+
+/*---------------------Box-5----------------------*/
+.box-5 { }
+
+.box-5-mane { 
+    max-width: 868px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.box-5-mane-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+    margin: 82px 0px 28px 0px;
+ }
+
+.box-5-mane-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+ }
+
+.box-5-mane-1-title {
+color: #000000;
+font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+font-size: 50px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 5px;
+margin: 0px 0px 39px 0px;
+ }
+
+.box-5-mane-1-location {
+    margin: 0px 0px 35px 0px;
+ }
+
+.a-1 {
+color: #000000;
+font-family: "PT Sans";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+position: relative;
+padding: 0px 0px 0px 30px;
+ }
+.a-1::before{
+content: url(../img/box-5/5.png);
+position: absolute;
+left: 0;
+top: 5;
+}
+
+.box-5-mane-1-tel { }
+
+.a-2 {
+color: #000000;
+font-family: "PT Sans";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+position: relative;
+padding: 0px 0px 0px 30px;
+ }
+
+ .a-2::before{
+    content: url(../img/box-5/6.png);
+    position: absolute;
+    left: 0;
+    top: 5;
+ }
+
+
+
+.box-5-mane-2-mail {
+    margin: 140px 0px 45px 0px;
+ }
+
+.a-3 {
+color: #000000;
+font-family: "PT Sans";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+position: relative;
+padding: 0px 0px 0px 35px;
+ }
+
+
+ .a-3::before{
+    content: url(../img/box-5/7.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+ }
+
+.box-5-mane-2-soc { }
+
+.box-5-mane-2-soc a{
+    margin: 0px 30px 0px 0px;
+}
+
+/*---------------------Box-6----------------------*/
+
+.box-6 { 
+    display: flex;
+}
+
+.box-6-map {
+    flex: 0 1 50%;
+ }
+
+.box-6-black {
+    flex: 0 1 50%;
+    background-color: #000;
+ }
+
+.box-6-black-form { 
+    margin: 53px 0px 0px 60px;
+    
+}
+
+.box-6-black-form-title { 
+color: #ffffff;
+font-family: "Akzidenz Grotesk BQ - Bd Cnd";
+font-size: 25px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+margin: 0px 0px 28px 0px;
+}
+
+
+.button-a {
+    display: block;
+    color: #fff;
+    background-color: #959595;
+    cursor: pointer;
+    padding: 13px 30px;
+    border-radius: 4px;
+    position: relative;
+    font-family: Bebas;
+    font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+}
+
+.button-a:hover{
+       background-color: #bab082;
+      transition: all 0.3s ease;
+      color: #000;
+}
+
+
+input[type='text']{
+    width: 374px;
+    height: 50px;
+    font-size: 18px;
+    margin: 0px 0px 25px 0px;
+    padding: 0px 0px 0px 10px;
+    background-color: #252525;
+    border: 2px solid #959595;
+    font-family: "PT Sans";
+    color: #fff;
+}
+
+#area{
+    width: 374px;
+    height: 95px;
+    font-size: 18px;
+    padding: 10px 0px 0px 10px;
+    background-color: #252525;
+    border: 2px solid #959595;
+    font-family: "PT Sans";
+    margin: 0px 0px 30px 0px;
+    color: #fff;
+}
+
+input:focus{
+    color: #fff
+}
+#area:focus{
+    color: #fff
+}
+
+
+/*-----------Footer---------------*/
+
+.footer{
+display: flex;
+justify-content: space-around;
+}
+
+.foottext{
+    border: 1px solid #000;
+}
+.footpic {
+color: #4d4d4d;
+font-family: "PT Sans";
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+text-decoration: underline;
+margin: 48px 0px 48px 0px;
+text-decoration: none;
+ }
+
+ .footpic span{
+     border-bottom: 1px solid gray ;
+ }
+.footer-picture {
+    display: flex;
+    align-items: center;
+ }
+
+.footer-picture img {
+max-width: 100%;
+ }
